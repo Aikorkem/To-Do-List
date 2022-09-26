@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 //connecting to database
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+mongoose.connect("mongodb+srv://AbylDouble:AbylDouble@cluster0.a55fsdd.mongodb.net/todolistDB");
 
 const Item = mongoose.model("Item", {name: {type: String, required: true}});
 const List = mongoose.model("List", {name: String, items: [{name: String}]});
